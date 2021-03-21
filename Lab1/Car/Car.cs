@@ -57,7 +57,7 @@ namespace Car
 
         public void ResetDailyOdometer()
         {
-            throw new NotImplementedException();
+            DailyOdometer = 0;
         }
     }
 }
