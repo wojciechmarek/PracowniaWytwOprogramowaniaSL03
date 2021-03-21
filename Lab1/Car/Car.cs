@@ -38,5 +38,10 @@ namespace Car
                 FuelLevel = TankCapacity;
             }
         }
+
+        public void Drive(int kilometers)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

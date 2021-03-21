@@ -2,6 +2,7 @@ using System;
 using Car.Enums;
 using FluentAssertions;
 using Xunit;
+using Xunit.Sdk;
 
 namespace CarTests
 {
@@ -52,6 +53,16 @@ namespace CarTests
             car.Refuel(14.0f);
 
             car.FuelLevel.Should().Be(14);
+        }
+        
+        public void Drive_ShouldIncreaseOdometerAndCalculateFuelNeededToDrive_ExceptionIfFuelIsNotEnought()
+        {
+            var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
+            
+            car.Refuel(14.0f);
+            car.Drive(100);
+
+            car.Odometer.Should().Be(100);
         }
     }
     
