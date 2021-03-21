@@ -29,6 +29,20 @@ namespace CarTests
             carFuelConsumption.Should().Be(5.7f);
             carTankCapacity.Should().Be(40);
         }
+        
+        [Fact]
+        public void Property_ShouldReturnCarInfoProperties_CurrentValues()
+        {
+            var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
+
+            var carFuelLevel = car.FuelLevel;
+            var odometer = car.Odometer;
+            var dailyOdometer = car.DailyOdometer;
+
+            carFuelLevel.Should().Be(0);
+            odometer.Should().Be(0);
+            dailyOdometer.Should().Be(0);
+        }
     }
     
     
