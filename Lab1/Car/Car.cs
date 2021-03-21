@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using Car.Enums;
 
 namespace Car
@@ -21,6 +22,11 @@ namespace Car
             Brand = brand;
             FuelConsumption = fuelConsumption;
             TankCapacity = tankCapacity;
+        }
+
+        public void Refuel(float amount)
+        {
+            throw new NotImplementedException();
         }
     }
 }

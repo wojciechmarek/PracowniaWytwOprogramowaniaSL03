@@ -43,6 +43,16 @@ namespace CarTests
             odometer.Should().Be(0);
             dailyOdometer.Should().Be(0);
         }
+        
+        [Fact]
+        public void Refuel_ShouldAddToCurrentFuelAmountProvidedFuelAmount_CurrentValue()
+        {
+            var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
+
+            car.Refuel(14.0f);
+
+            car.FuelLevel.Should().Be(14);
+        }
     }
     
     
