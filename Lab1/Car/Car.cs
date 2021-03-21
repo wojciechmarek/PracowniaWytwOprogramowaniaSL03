@@ -41,7 +41,18 @@ namespace Car
 
         public void Drive(int kilometers)
         {
-            throw new NotImplementedException();
+            if (kilometers <= 0)
+            {
+                throw new SyntaxErrorException("Wrong kilometers amount");
+            }
+
+            if ((FuelLevel / FuelConsumption) * 100 < kilometers)
+            {
+                throw new SyntaxErrorException("There is no enought fuel in the tank");
+            }
+            
+            FuelLevel -= (kilometers * FuelConsumption) / 100;
+            Odometer += kilometers;
         }
     }
 }

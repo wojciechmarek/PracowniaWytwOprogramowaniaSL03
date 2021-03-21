@@ -55,6 +55,7 @@ namespace CarTests
             car.FuelLevel.Should().Be(14);
         }
         
+        [Fact]
         public void Drive_ShouldIncreaseOdometerAndCalculateFuelNeededToDrive_ExceptionIfFuelIsNotEnought()
         {
             var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
