@@ -13,5 +13,23 @@ namespace CarTests
             var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
             car.Should().NotBeNull();
         }
+
+        [Fact]
+        public void Property_ShouldReturnValueProvidedInTheCtor_CorrectValues()
+        {
+            var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
+
+            var carColor = car.Color;
+            var carBrand = car.Brand;
+            var carFuelConsumption = car.FuelConsumption;
+            var carTankCapacity = car.TankCapacity;
+
+            carColor.Should().Be(Color.Black);
+            carBrand.Should().Be("Ford");
+            carFuelConsumption.Should().Be(5.7f);
+            carTankCapacity.Should().Be(40);
+        }
     }
+    
+    
 }
