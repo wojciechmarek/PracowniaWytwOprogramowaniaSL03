@@ -9,6 +9,11 @@ namespace Car
         public string Brand { get; }
         public float FuelConsumption { get; }
         public int TankCapacity { get; }
+        
+
+        public float FuelLevel { get; private set; }
+        public int Odometer { get; private set; }
+        public int DailyOdometer { get; private set; }
 
         public Car(Color color, string brand, float fuelConsumption, int tankCapacity)
         {
