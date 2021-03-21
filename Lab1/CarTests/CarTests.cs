@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CarTests
 {
-    public class UnitTest1
+    public class CarTests
     {
         [Fact]
         public void Test1()
