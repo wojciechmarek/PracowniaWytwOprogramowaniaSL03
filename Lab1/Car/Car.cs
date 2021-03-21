@@ -54,5 +54,10 @@ namespace Car
             FuelLevel -= (kilometers * FuelConsumption) / 100;
             Odometer += kilometers;
         }
+
+        public void ResetDailyOdometer()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -65,6 +65,19 @@ namespace CarTests
 
             car.Odometer.Should().Be(100);
         }
+        
+        [Fact]
+        public void Drive_ShouldResetDailyOdometer_Zero()
+        {
+            var car = new Car.Car(Color.Black, "Ford", 5.7f, 40);
+            
+            car.Refuel(10);
+            car.Drive(10);
+            car.Drive(20);
+            car.ResetDailyOdometer();
+
+            car.DailyOdometer.Should().Be(0);
+        }
     }
     
     
