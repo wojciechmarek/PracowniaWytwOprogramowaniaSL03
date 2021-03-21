@@ -26,7 +26,17 @@ namespace Car
 
         public void Refuel(float amount)
         {
-            throw new NotImplementedException();
+            if (amount <= 0 || amount > TankCapacity)
+            {
+                throw new SyntaxErrorException("Wrong fuel amount");
+            }
+
+            FuelLevel += amount;
+
+            if (FuelLevel > TankCapacity)
+            {
+                FuelLevel = TankCapacity;
+            }
         }
     }
 }
